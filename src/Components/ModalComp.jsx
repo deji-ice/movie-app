@@ -13,6 +13,7 @@ import {
 
 const ModalComp = ({ isOpen, toggle, handleAdd }) => {
   const [newMovie, setNewMovie] = useState({
+    id: `++1`,
     title: ``,
     description: ``,
     urlPoster: ``,

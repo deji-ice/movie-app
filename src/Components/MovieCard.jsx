@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Card, CardTitle, CardImg, CardBody, CardText } from 'reactstrap';
-
+import "./Pages/Home.css"
 import Rate from './Rate';
 
-const MovieCard = ({ movie: { title, posterUrl, description, rate } }) => {
+const MovieCard = ({ movie: {title, posterUrl, description, rate } }) => {
   return (
-    <div className=' cardM col-3 mt-3'>
+    <div className=' cardM'>
         <CardTitle>
           <div className=' cardT row justify-content-center mt-1'>
             <h6>{title}</h6>
@@ -16,8 +16,7 @@ const MovieCard = ({ movie: { title, posterUrl, description, rate } }) => {
         <CardImg className='cardImg'
           src={posterUrl}
           alt='Card image cap'
-          style={{ cursor: 'pointer' }}>
-          
+          style={{ cursor: 'pointer' }}>       
           </CardImg>
         <CardBody>
           <div className=' cardB row'>

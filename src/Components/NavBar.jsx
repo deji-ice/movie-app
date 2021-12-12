@@ -1,7 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types';
 import Rate from './Rate';
+import { Link } from "react-router-dom";
 import {  Navbar, Container, Nav, Form, Button, NavDropdown, FormControl} from 'react-bootstrap';
+import Home from './Pages/Home';
 
 const NavBar = ({ handleSearch, setRatingSearch, ratingSearch }) => {
 
@@ -18,7 +20,10 @@ const NavBar = ({ handleSearch, setRatingSearch, ratingSearch }) => {
         style={{ maxHeight: '100px' }}
         navbarScroll
       >
+        <Link to= "/">
         <Nav.Link href="#action1">Home</Nav.Link>
+        </Link>
+       
         <Nav.Link href="#action2">TV Series</Nav.Link>
         <NavDropdown title="Genre" id="navbarScrollingDropdown">
           <NavDropdown.Item href="#action3">Action</NavDropdown.Item>

@@ -1,0 +1,24 @@
+.bk{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 0rem 19rem 0rem 19rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    height: 41.1rem;
+}
+.heading{
+    color: rgb(211, 20, 20);
+}
+
+.descrip{
+    color: white;
+    font-style: italic;
+}
+.Frame{
+    border-radius: 2rem;
+}
+.linkT:link{
+    text-decoration: none;
+}
