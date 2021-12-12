@@ -5,12 +5,11 @@ import { useParams } from 'react-router';
 import { Link, Navigate } from "react-router-dom";
 
 
-const Trailers = () => {
-  const { id } = useParams();
+function Trailers (){
   const vues = moviesList.filter((movie) => {
     return movie.id === Number(id);
   });
- console.log(vues)
+  const { id } = useParams();
   return ( 
   <div className='bk'> 
       {id && (
@@ -18,8 +17,8 @@ const Trailers = () => {
         <h1 className="heading">{vues[0].title}</h1>
         <iframe
           className='Frame'
-            width="700"
-            height="415"
+            width="670"
+            height="315"
             src= {vues[0].trailerUrl}
             title="YouTube video player"
             frameborder="0"
@@ -31,7 +30,6 @@ const Trailers = () => {
         <p className="descrip">{vues[0].description}</p>
         </Link>
       </div>
-    
       )}
   </div>
   );

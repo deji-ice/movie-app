@@ -12,7 +12,7 @@ export default function Home() {
     const addMovie = (newMovie) => setMovieList([...movieList, newMovie]);
     const handleSearch = (a) => setSearchWord(a.target.value);
     return (
-            <div className='Home container'>
+      <div className='Home container'>
       <NavBar 
         handleSearch={handleSearch}
         setRatingSearch={setRatingSearch}
@@ -21,12 +21,8 @@ export default function Home() {
       <MoviesList
         moviesArray={
           searchWord
-            ? movieList.filter((movie) =>
-                movie.title.toLowerCase().includes(searchWord.toLowerCase())
-              )
-            : ratingSearch > 1
-            ? movieList.filter((movie) => movie.rate >= ratingSearch)
-            : movieList
+            ? movieList.filter((movie) =>movie.title.toLowerCase().includes(searchWord.toLowerCase())):
+            ratingSearch > 1? movieList.filter((movie) => movie.rate >= ratingSearch): movieList
         }
       />
         </div>

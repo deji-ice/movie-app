@@ -1,8 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { Link } from "react-router-dom";
 import MovieCard from './MovieCard';
-import { moviesList } from './dummyData';
 import './Pages/Home.css';
 
 function MovieList({movie, moviesArray}) {
@@ -13,14 +11,8 @@ function MovieList({movie, moviesArray}) {
      <MovieCard movie={movie} key={key} />
      </Link>
    ))} 
-
  </div>
   )
 }
-
-
-MovieList.propTypes = {
-  moviesArray: PropTypes.array.isRequired,
-};
 
 export default MovieList;

@@ -1,19 +1,10 @@
 import React, { useState } from 'react';
-import PropTypes from 'prop-types';
-import {
-  Modal,
-  ModalBody,
-  ModalHeader,
-  ModalFooter,
-  Button,
-  InputGroup,
-  Label,
-  Input,
-} from 'reactstrap';
+import {Modal,ModalBody,ModalHeader,ModalFooter,Button,InputGroup,Label,Input} from 'reactstrap';
 
-const ModalComp = ({ isOpen, toggle, handleAdd }) => {
+
+function ModalComp ({ isOpen, toggle, handleAdd }){
   const [newMovie, setNewMovie] = useState({
-    id: `++1`,
+   
     title: ``,
     description: ``,
     urlPoster: ``,
@@ -92,12 +83,6 @@ const ModalComp = ({ isOpen, toggle, handleAdd }) => {
       </Modal>
     </div>
   );
-};
-
-ModalComp.propTypes = {
-  isOpen: PropTypes.bool.isRequired,
-  toggle: PropTypes.func.isRequired,
-  handleAdd: PropTypes.func.isRequired,
 };
 
 export default ModalComp;

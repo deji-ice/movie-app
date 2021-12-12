@@ -4,7 +4,7 @@ import { Card, CardTitle, CardImg, CardBody, CardText } from 'reactstrap';
 import "./Pages/Home.css"
 import Rate from './Rate';
 
-const MovieCard = ({ movie: {title, posterUrl, description, rate } }) => {
+function MovieCard ({ movie: {title, posterUrl, description, rate } }){
   return (
     <div className=' cardM'>
         <CardTitle>
@@ -29,10 +29,6 @@ const MovieCard = ({ movie: {title, posterUrl, description, rate } }) => {
       <Rate rating={rate} />
     </div>
   );
-};
-
-MovieCard.propTypes = {
-  movie: PropTypes.object.isRequired,
 };
 
 export default MovieCard;
